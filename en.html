@@ -740,7 +740,7 @@ function doSubmit(){
   if(btn){btn.disabled=true;var t=btn.querySelector(".fsub-t");if(t)t.textContent="傳送中...";}
   var ch=document.getElementById("f-ch");
   var payload={company:co,name:nm,email:em,phone:g("f-ph"),region:rg?rg.value:"",channel:ch?ch.value:"",message:g("f-ms"),lang:"zh"};
-  fetch("YOUR_GAS_ENDPOINT_URL",{method:"POST",body:JSON.stringify(payload)}).catch(function(){});
+  fetch("https://script.google.com/macros/s/AKfycbwl_6kvC7JBfQkVsSq1jhERudNw8v64KYO1TvAdFigaHrLxtbADD_33TsfbBrg5yTBU/exec",{method:"POST",body:JSON.stringify(payload)}).catch(function(){});
   var fw=document.getElementById("fwrap"),fok=document.getElementById("fok");
   if(fw)fw.style.display="none";
   if(fok)fok.style.display="block";
